@@ -1,0 +1,34 @@
+[tool.black]
+line-length = 100
+
+[tool.isort]
+line_length = 100
+profile = "black"
+
+[tool.poetry]
+name = "grouped-length-sort"
+version = "0.1.0"
+description = "An isort plugin to enable sorting imports by length, but still grouping packages together."
+authors = ["Brendan Cazier <520246+cazier@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "grouped_length_isort.py"}]
+
+[tool.poetry.plugins."isort.sort_function"]
+grouped_length = "grouped_length_isort:grouped_length"
+
+[tool.poetry.dependencies]
+python = ">=3.8.0,<4.0.0"
+isort = "^5.12.0"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+mypy = "^1.4.1"
+ruff = "^0.0.282"
+pre-commit = "^3.3.3"
+ward = "^0.67.2b0"
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
