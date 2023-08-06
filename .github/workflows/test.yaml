@@ -1,7 +1,4 @@
 name: Test Python Files
-defaults:
-  run:
-    working-directory: python
 
 on:
   push:
