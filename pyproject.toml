@@ -1,17 +1,16 @@
 [tool.black]
-line-length = 100
+line-length = 120
 
 [tool.ruff]
-line-length = 100
+line-length = 120
 
 [tool.isort]
-line_length = 100
+line_length = 120
 profile = "black"
 
 [tool.mypy]
 python_version = 3.8
 strict = true
-exclude = "test_*"
 
 [tool.poetry]
 name = "grouped-length-sort"
